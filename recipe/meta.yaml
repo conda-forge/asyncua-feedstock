@@ -1,5 +1,5 @@
 {% set name = "asyncua" %}
-{% set version = "0.9.92" %}
+{% set version = "0.9.93" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7fed0034935485b76605c87f65519b8a93bb6416f03cfd7156a21311912b4c1f
+  sha256: 6450ad6f4e1d9a00b33dca23884df4f1457d60f2019f2beaf8856549d6c31d97
 
 build:
   noarch: python
@@ -61,7 +61,7 @@ test:
 
 about:
   home: http://freeopcua.github.io
-  summary: 'Pure Python OPC-UA client and server library'
+  summary: Pure Python OPC-UA client and server library
   license: LGPL-3.0-or-later
   license_family: LGPL
   license_file: COPYING
