@@ -1,5 +1,5 @@
 {% set name = "asyncua" %}
-{% set version = "0.9.95" %}
+{% set version = "0.9.96" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2e923aeb79a0d5111ec0b7e56b41d8a470cf0259547ba7742c2e30bd921532c1
+  sha256: 8e48de30660d872ba55a6fba9c343fccdc7d6f11525195508c87df8c0578814e
 
 build:
   noarch: python
