@@ -1,11 +1,11 @@
-About asyncua
-=============
+About asyncua-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/asyncua-feedstock/blob/main/LICENSE.txt)
 
 Home: http://freeopcua.github.io
 
 Package license: LGPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/asyncua-feedstock/blob/main/LICENSE.txt)
 
 Summary: Pure Python OPC-UA client and server library
 
