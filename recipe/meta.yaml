@@ -33,7 +33,7 @@ requirements:
   run:
     - aiofiles
     - aiosqlite
-    - cryptography
+    - cryptography >40.0.1
     - importlib-metadata
     - pyopenssl
     - python >=3.7
