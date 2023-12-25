@@ -1,5 +1,5 @@
 {% set name = "asyncua" %}
-{% set version = "1.0.5" %}
+{% set version = "1.0.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2757163f2a2ff1d8b923297d4af9b8161d25bed95867c1f67078faaf7f2d3f92
+  sha256: 119dcd1107bea8bad80a524f27d5195feecf3bbae47a3268a431e54a0965c777
 
 build:
   noarch: python
@@ -33,7 +33,7 @@ requirements:
   run:
     - aiofiles
     - aiosqlite
-    - cryptography
+    - cryptography >40.0.1
     - importlib-metadata
     - pyopenssl
     - python >=3.7
