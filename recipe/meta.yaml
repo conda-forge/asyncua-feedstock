@@ -35,7 +35,7 @@ requirements:
     - aiosqlite
     - cryptography >42.0.0
     - importlib-metadata
-    - pyopenssl
+    - pyopenssl >23.2.0
     - python >=3.7
     - python-dateutil
     - pytz
