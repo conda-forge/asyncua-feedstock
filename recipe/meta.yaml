@@ -6,13 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: d5edac9234fd7f1ed6a923fad1bd709bd0fd3f8a0d41637d645666620375173f
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   entry_points:
     - uabrowse = asyncua.tools:uals
     - uacall = asyncua.tools:uacall
@@ -29,14 +29,14 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - aiofiles
     - aiosqlite
     - cryptography >42.0.0
     - importlib-metadata
     - pyopenssl >23.2.0
-    - python >=3.7
+    - python >={{ python_min }}
     - python-dateutil
     - pytz
     - sortedcontainers
@@ -47,6 +47,7 @@ test:
     - asyncua
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
     - uabrowse --help
