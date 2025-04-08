@@ -1,5 +1,5 @@
 {% set name = "asyncua" %}
-{% set version = "1.1.5" %}
+{% set version = "1.1.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d5edac9234fd7f1ed6a923fad1bd709bd0fd3f8a0d41637d645666620375173f
+  sha256: da0fff57477ce9bd50cd48ab3aca5fc4dbfa4917127664a3e04422aaab7a4b51
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
   entry_points:
     - uabrowse = asyncua.tools:uals
     - uacall = asyncua.tools:uacall
