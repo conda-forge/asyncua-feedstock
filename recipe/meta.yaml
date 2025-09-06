@@ -43,6 +43,7 @@ requirements:
     - pytz
     - sortedcontainers
     - typing-extensions
+    - wait_for2 ==0.3.2
 
 test:
   imports:
