@@ -1,13 +1,13 @@
 {% set name = "asyncua" %}
-{% set version = "1.1.8" %}
+{% set version = "2.0" %}
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4a348e2b9bdfa7869edaef2d7f1b08920140d01ab79f336744b06e4c692e509d
+  sha256: a5f7888188846597326be623f32708c3910ab1cd95b2c6aff539b3fabd38fa32
 
 build:
   noarch: python
@@ -32,17 +32,16 @@ requirements:
     - pip
     - python {{ python_min }}
   run:
-    - aiofiles
     - aiosqlite
+    - anyio
     - cryptography >42.0.0
-    - importlib-metadata
     - pyopenssl >23.2.0
     - python >={{ python_min }}
     - python-dateutil
     - pytz
     - sortedcontainers
     - typing-extensions
-    - wait_for2 ==0.3.2
+    - wait_for2
 
 test:
   imports:
