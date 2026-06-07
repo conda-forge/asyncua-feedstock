@@ -32,17 +32,16 @@ requirements:
     - pip
     - python {{ python_min }}
   run:
-    - aiofiles
     - aiosqlite
+    - anyio
     - cryptography >42.0.0
-    - importlib-metadata
     - pyopenssl >23.2.0
     - python >={{ python_min }}
     - python-dateutil
     - pytz
     - sortedcontainers
     - typing-extensions
-    - wait_for2 ==0.3.2
+    - wait_for2
 
 test:
   imports:
