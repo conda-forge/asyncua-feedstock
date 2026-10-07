@@ -52,7 +52,6 @@ tests:
         - asyncua
       pip_check: true
   - script:
-      - pip check
       - uabrowse --help
       - uacall --help
       - uaclient --help
