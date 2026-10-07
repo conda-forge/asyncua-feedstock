@@ -3,7 +3,7 @@ About asyncua-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/asyncua-feedstock/blob/main/LICENSE.txt)
 
-Home: http://freeopcua.github.io
+Home: http://freeopcua.github.io/
 
 Package license: LGPL-3.0-or-later
 
