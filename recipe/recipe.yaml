@@ -1,0 +1,77 @@
+context:
+  version: "2.1.0"
+
+package:
+  name: asyncua
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/a/asyncua/asyncua-${{ version }}.tar.gz
+  sha256: d741f5e21f189ac0a45b8dda13539c2d49d8d992b9b62d2758efe1bfd3d1454c
+
+build:
+  noarch: python
+  script: python -m pip install . -vv
+  number: 0
+  python:
+    entry_points:
+      - uabrowse = asyncua.tools:uals
+      - uacall = asyncua.tools:uacall
+      - uaclient = asyncua.tools:uaclient
+      - uadiscover = asyncua.tools:uadiscover
+      - uageneratestructs = asyncua.tools:uageneratestructs
+      - uahistoryread = asyncua.tools:uahistoryread
+      - uals = asyncua.tools:uals
+      - uaread = asyncua.tools:uaread
+      - uaserver = asyncua.tools:uaserver
+      - uasubscribe = asyncua.tools:uasubscribe
+      - uawrite = asyncua.tools:uawrite
+
+requirements:
+  host:
+    - hatchling
+    - pip
+    - python ${{ python_min }}.*
+  run:
+    - aiosqlite
+    - anyio
+    - cryptography >45.0.0
+    - python >=${{ python_min }}
+    - python-dateutil
+    - pytz
+    - sortedcontainers
+    - typing-extensions
+    - wait_for2
+
+tests:
+  - python:
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+      imports:
+        - asyncua
+      pip_check: true
+  - script:
+      - pip check
+      - uabrowse --help
+      - uacall --help
+      - uaclient --help
+      - uadiscover --help
+      - uageneratestructs --help
+      - uahistoryread --help
+      - uals --help
+      - uaread --help
+      - uaserver --help
+      - uasubscribe --help
+      - uawrite --help
+
+about:
+  homepage: http://freeopcua.github.io
+  summary: 'Pure Python OPC-UA client and server library'
+  license: LGPL-3.0-or-later
+  license_file: COPYING
+  repository: https://github.com/FreeOpcUa/opcua-asyncio
+
+extra:
+  recipe-maintainers:
+    - m-rossi
