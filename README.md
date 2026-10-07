@@ -3,7 +3,7 @@ About asyncua-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/asyncua-feedstock/blob/main/LICENSE.txt)
 
-Home: http://freeopcua.github.io
+Home: http://freeopcua.github.io/
 
 Package license: LGPL-3.0-or-later
 
@@ -42,31 +42,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `asyncua` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install asyncua
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install asyncua
 ```
 
-It is possible to list all of the versions of `asyncua` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add asyncua
+# for installing globally
+pixi global install asyncua
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `asyncua` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search asyncua --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search asyncua --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search asyncua --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -78,6 +120,8 @@ mamba repoquery whoneeds asyncua --channel conda-forge
 # List dependencies of `asyncua`:
 mamba repoquery depends asyncua --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
